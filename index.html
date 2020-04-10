@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Music App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--greenscock-->
+    <!--    <script src="https://cdnis.cloudflare.com/ajax/libs/gasp/2.0.2/TweenMax.min.js"></script>-->
+    <script src="greensock-js/greensock-js/src/uncompressed/TweenMax.js"></script>
+</head>
+</head>
+
+<body>
+
+    <div class="overlay">
+        <h1>Vibe Up Music App</h1>
+    </div>
+
+    <div id="bg">
+        <div class="blacklayer"> </div>
+        <img src="images/jonCover.jpg" alt="">
+    </div>
+    <div id="main">
+        <div id="image">
+            <img src="images/jonCover.jpg" alt="">
+        </div>
+        <div id="player">
+            <div id="song_title">
+                <h5>Demo</h5>
+            </div>
+            <div id="buttons">
+                <button id="previous" onclick="previous()"><img src="/images/icons/icons8_first_50px.png"
+                        alt=""></button>
+                <button id="play" onclick="playOrPauseSong()"><img src="/images/icons/play.png" alt=""></button>
+                <button id="next" onclick="next()"><img src="/images/icons/icons8_last_50px.png" alt=""></button>
+            </div>
+
+            <div id="seekbar">
+                <div id="fill"></div>
+                <div id="handle"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        TweenMax.to(".overlay h1", 2, {
+            delay: 3.5,
+            opacity: 0,
+            y: -60,
+            ease: Expo.easeInOut
+        })
+        TweenMax.to(".overlay ", 2, {
+            delay: 4.5,
+            top: "-100%",
+            ease: Expo.easeInOut
+        })
+        TweenMax.from("#bg", 1, {
+            delay: 6,
+            opacity: 0,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from("#main", 1, {
+            delay: 7,
+            opacity: 0,
+            ease: Expo.easeInOut
+        })
+    </script>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
